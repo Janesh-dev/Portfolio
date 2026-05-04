@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janesh | AI & Full-Stack Developer</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom Selection Color */
+        ::selection {
+            background-color: rgba(6, 182, 212, 0.3);
+            color: #a5f3fc;
+        }
+        body {
+            background-color: #030712; /* gray-950 */
+            color: #e5e7eb; /* gray-200 */
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        /* Navbar blur effect */
+        .nav-scrolled {
+            background-color: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+    </style>
+</head>
+<body class="antialiased relative">
+
+    <!-- Interactive Canvas Background -->
+    <canvas id="network-canvas" class="fixed inset-0 z-0 opacity-40 pointer-events-none"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-5">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+                JANESH<span class="text-cyan-500">.</span>dev
+            </a>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#home" class="uppercase tracking-wider text-gray-400 hover:text-cyan-400 transition-colors">Home</a>
+                <a href="#about" class="uppercase tracking-wider text-gray-400 hover:text-cyan-400 transition-colors">About</a>
+                <a href="#skills" class="uppercase tracking-wider text-gray-400 hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#projects" class="uppercase tracking-wider text-gray-400 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#achievements" class="uppercase tracking-wider text-gray-400 hover:text-cyan-400 transition-colors">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-20">
+        
+        <!-- HERO SECTION -->
+        <section id="home" class="min-h-[85vh] flex flex-col justify-center items-start pt-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6 animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                Available for Internships
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Janesh</span>
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-semibold text-gray-400 mb-6">
+                B.Tech CSE Student & Full-Stack AI Developer
+            </h2>
+            <p class="max-w-2xl text-lg text-gray-400 leading-relaxed mb-10">
+                Ambitious engineer with hands-on expertise in Java/Spring Boot, MERN stack, and AI-powered applications. Architecting scalable systems and building end-to-end ML/AI pipelines with RAG & LLMs.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="px-8 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all hover:scale-105 inline-block">
+                    View My Work
+                </a>
+                <a href="mailto:janesh8822@gmail.com" class="px-8 py-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all font-semibold flex items-center gap-2 hover:scale-105 inline-block">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+            </div>
+            
+            <div class="mt-12 flex items-center gap-6 text-gray-400">
+                <a href="https://github.com/Janesh-dev" target="_blank" class="hover:text-cyan-400 transition-colors text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/janesh" target="_blank" class="hover:text-cyan-400 transition-colors text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                 gap-2 text-sm"><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 border-t border-white/10">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold">About Me & Education</h2>
+                <div class="h-[1px] bg-gradient-to-r from-purple-500 to-transparent flex-1"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6 text-gray-300 leading-relaxed bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <p>
+                        I am currently pursuing my <strong>B.Tech in Computer Science Engineering (2nd Year)</strong> at GL Bajaj Institute of Technology and Management.
+                    </p>
+                    <p>
+                        I have completed an intensive roadmap spanning <strong>Java OOPS & DSA, PostgreSQL, Spring Boot REST APIs, Microservices, and Docker</strong>.
+                    </p>
+                    <p>
+                        My true passion lies at the intersection of robust backend systems and cutting-edge Artificial Intelligence. I actively build projects leveraging <strong>LangChain, Vector Databases (FAISS/Pinecone), and the MERN stack</strong> to solve real-world problems.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="relative pl-8 border-l border-purple-500/30 space-y-8">
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1 bg-gray-950 border-2 border-purple-500 w-4 h-4 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                            <h3 class="text-xl font-bold text-white">B.Tech - Computer Science & Engineering</h3>
+                            <p class="text-cyan-400 font-medium">GL Bajaj Institute of Technology and Management</p>
+                            <p class="text-sm text-gray-400 mt-1">Sep 2024 - Aug 2028 | CGPA: 8.37</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1 bg-gray-950 border-2 border-gray-600 w-4 h-4 rounded-full"></div>
+                            <h3 class="text-lg font-bold text-gray-300">Class XII - Science (PCM)</h3>
+                            <p class="text-gray-400">Navin Bharti Senior Secondary School</p>
+                            <p class="text-sm text-gray-500 mt-1">CBSE | Mar 2023</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1 bg-gray-950 border-2 border-gray-600 w-4 h-4 rounded-full"></div>
+                            <h3 class="text-lg font-bold text-gray-300">Class X</h3>
+                            <p class="text-gray-400">Navin Bharti Senior Secondary School</p>
+                            <p class="text-sm text-gray-500 mt-1">CBSE | 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 border-t border-white/10">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="h-[1px] bg-gradient-to-l from-cyan-500 to-transparent flex-1"></div>
+                <h2 class="text-3xl md:text-4xl font-bold">Technical Arsenal</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill 1 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(6,182,212,0.3)] backdrop-blur-sm group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 bg-white/5 rounded-lg group-hover:scale-110 transition-transform text-cyan-400">
+                            <i class="fas fa-code text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Java</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Python</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">C++</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">JavaScript</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">HTML/CSS</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(168,85,247,0.3)] backdrop-blur-sm group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 bg-white/5 rounded-lg group-hover:scale-110 transition-transform text-purple-400">
+                            <i class="fas fa-terminal text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Backend & Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Spring Boot</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">FastAPI</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">React</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Node.js</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Express.js</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-pink-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(236,72,153,0.3)] backdrop-blur-sm group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 bg-white/5 rounded-lg group-hover:scale-110 transition-transform text-pink-400">
+                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">AI & Machine Learning</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">TensorFlow</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">LangChain</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">RAG Pipelines</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Prompt Engineering</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">OpenCV</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(16,185,129,0.3)] backdrop-blur-sm group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 bg-white/5 rounded-lg group-hover:scale-110 transition-transform text-emerald-400">
+                            <i class="fas fa-database text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">PostgreSQL</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">MongoDB</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">FAISS</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Pinecone</span>
+                    </div>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(59,130,246,0.3)] backdrop-blur-sm group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 bg-white/5 rounded-lg group-hover:scale-110 transition-transform text-blue-400">
+                            <i class="fas fa-cloud text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">DevOps & Cloud</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Docker</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">AWS (EC2, S3)</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Git/GitHub</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Linux</span>
+                    </div>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-yellow-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(234,179,8,0.3)] backdrop-blur-sm group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 bg-white/5 rounded-lg group-hover:scale-110 transition-transform text-yellow-400">
+                            <i class="fas fa-microchip text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Core CS</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">DSA (Java)</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">OOP</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">System Design</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">Computer Networks</span>
+                        <span class="px-3 py-1 text-sm bg-gray-900/80 border border-white/5 rounded-full text-gray-300">DBMS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="py-20 border-t border-white/10">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold">Featured Projects</h2>
+                <div class="h-[1px] bg-gradient-to-r from-purple-500 to-transparent flex-1"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="relative group rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:border-purple-500/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="p-8 relative z-10 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-xl">
+                                <i class="fas fa-briefcase text-xl"></i>
+                            </div>
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                <i class="fas fa-external-link-alt text-lg"></i>
+                            </a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">AI Personal Study Assistant</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Built an AI-powered study tool that ingests PDFs and auto-generates structured notes, flashcards, and quizzes using LangChain. Implemented a RAG pipeline with FAISS/Pinecone vector databases enabling semantic 'chat with documents'.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/10">
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">LangChain</span>
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">FAISS</span>
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:border-cyan-500/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="p-8 relative z-10 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="p-3 bg-cyan-500/10 text-cyan-400 rounded-xl">
+                                <i class="fas fa-briefcase text-xl"></i>
+                            </div>
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                <i class="fas fa-external-link-alt text-lg"></i>
+                            </a>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Smart Campus Management</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Designed a full-stack college management platform covering classroom booking, event management, and complaints. Integrated face recognition-based attendance using OpenCV with a fully mobile-responsive UI.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/10">
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">MERN Stack</span>
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Node.js</span>
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">OpenCV</span>
+                            <span class="text-xs font-mono text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="py-20 border-t border-white/10">
+           <div class="flex items-center gap-4 mb-10">
+                <div class="h-[1px] bg-gradient-to-l from-cyan-500 to-transparent flex-1"></div>
+                <h2 class="text-3xl md:text-4xl font-bold">Certifications & Achievements</h2>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden">
+                <!-- Decorative background shape -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                
+                <div class="grid md:grid-cols-2 gap-y-6 gap-x-8 relative z-10">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-award text-purple-400 mt-1 text-lg"></i>
+                        <span class="text-gray-300">Participant - Google BigCode 2026 India</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-award text-purple-400 mt-1 text-lg"></i>
+                        <span class="text-gray-300">Completed AR/VR Immersive Technologies Training - aalgorix</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-award text-purple-400 mt-1 text-lg"></i>
+                        <span class="text-gray-300">Oracle OCI 2025 - Gen AI Professional & Foundations</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-award text-purple-400 mt-1 text-lg"></i>
+                        <span class="text-gray-300">AWS Academy Gen AI, ML & Cloud Foundations</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-award text-purple-400 mt-1 text-lg"></i>
+                        <span class="text-gray-300">Cisco DevNet Associate & CyberOps Associate</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-award text-purple-400 mt-1 text-lg"></i>
+                        <span class="text-gray-300">Deloitte Data Analytics & Cyber Job Simulations</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTACT -->
+        <footer class="mt-20 pt-10 border-t border-white/10 text-center flex flex-col items-center">
+            <h2 class="text-3xl font-bold mb-6">Let's Build Something Great.</h2>
+            <p class="text-gray-400 max-w-lg mb-8">
+                Actively seeking internship opportunities to contribute to high-impact engineering teams. My inbox is always open.
+            </p>
+            <a href="mailto:janesh8822@gmail.com" class="px-8 py-4 rounded-full bg-white text-gray-950 font-bold hover:scale-105 transition-transform flex items-center gap-2 mb-16">
+                <i class="fas fa-envelope"></i> Say Hello
+            </a>
+            
+            <div class="w-full flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 pb-8">
+                <p>&copy; <span id="year"></span> Janesh. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="https://github.com/Janesh-dev" class="hover:text-white transition-colors">GitHub</a>
+                    <a href="https://linkedin.com/in/janesh" class="hover:text-white transition-colors">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Logic Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Network Background Canvas Logic
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const colors = ['#06b6d4', '#8b5cf6']; // Cyan and Purple
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const numParticles = window.innerWidth < 768 ? 40 : 80;
+            for (let i = 0; i < numParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            // Draw connections
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 120) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(139, 92, 246, ${1 - distance / 120})`; // Fading purple
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        animate();
+    </script>
+</body>
+</html>
